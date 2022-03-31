@@ -11,9 +11,7 @@ function App() {
       <Toolbar></Toolbar>
       <Map></Map>
       <Lichtenlijstboek></Lichtenlijstboek>
-
     </div>
   );
 }
-
 export default App;
