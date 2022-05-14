@@ -23,11 +23,11 @@ export default class lichtenlijstboek extends Component {
   
   render() {
     return (
-      <div className='card m-3 p-2'>
+      <div className='lichtenlijstboek card m-3 p-2'>
         <h2>Lichtenlijst boek</h2>
         <Inleiding></Inleiding>
-        <Lijstderlichten></Lijstderlichten>
-        <Notities></Notities>
+        <Lijstderlichten className="print"></Lijstderlichten>
+        <Notities className="print"></Notities>
       </div>
     )
   }

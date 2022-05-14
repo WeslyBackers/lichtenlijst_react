@@ -1,16 +1,28 @@
 import React, { Component } from 'react'
+import Toolbutton from './Toolbutton';
+import '../component_css/Toolbar.css';
 
 export default class Toolbar extends Component {
+
   render() {
+    var buttonnames = [
+    {'caption':'JSON','function':'openJsonFile()'},
+    {'caption':'GML','function':'openGmlFile()'},
+    {'caption':'Map','function':'openMap()'},
+    {'caption':'Print','function':'print()'},
+    {'caption':'Info','function':'openInfo()'},
+    {'caption':'Workflow','function':'openWorkflow()'}
+  ];
+    var buttons = [];
+    buttonnames.forEach((item,index)=>{
+      buttons.push(
+      <Toolbutton name={item.caption} id={item.index} function={item.function}>
+        {item.caption}
+      </Toolbutton>)
+    })
     return (
-      <div className='btn-toolbar m-3 p-2 d-flex btn-group-large bg-secondary rounded-2' role='group'>
-          <button className='btn btn-info m-2'>JSON</button>
-          <button className='btn btn-info m-2'>GML</button>
-          <button className='btn btn-info m-2'>db</button>
-          <button className='btn btn-info m-2'>print</button>
-          <button className='btn btn-info m-2'>map</button>
-          <button className='btn btn-info m-2'>search</button>
-          <button className='btn btn-info m-2'>info</button>
+      <div className='toolbar btn-toolbar m-3 p-2 d-flex btn-group-large rounded-2' role='group'>
+        {buttons}
       </div>
     )
   }

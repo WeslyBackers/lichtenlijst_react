@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 export default class Tabeltitels extends Component {
   render() {
     return (
-      <div className='table-responsive-xl bd-highlight fixed-top'>
-        <table className='table'>
+      <div className='tabeltitels table-responsive-xl bd-highlight fixed'>
+        <table className='table table-ll'>
         <thead>
             <tr>
                 <th className=' text-center'>VOLGNR.</th>

@@ -1,0 +1,10 @@
+@page{
+    size: A4 portrait !important;
+}
+
+@media print{
+    .print{
+        margin: 1cm;
+        page-break-before: always;
+    }
+}
