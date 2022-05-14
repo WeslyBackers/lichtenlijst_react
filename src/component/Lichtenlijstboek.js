@@ -25,9 +25,9 @@ export default class lichtenlijstboek extends Component {
     return (
       <div className='lichtenlijstboek card m-3 p-2'>
         <h2>Lichtenlijst boek</h2>
-        <Inleiding></Inleiding>
-        <Lijstderlichten className="print"></Lijstderlichten>
-        <Notities className="print"></Notities>
+        <Inleiding className="new-page"></Inleiding>
+        <Lijstderlichten className="new-page"></Lijstderlichten>
+        <Notities className="new-page"></Notities>
       </div>
     )
   }
