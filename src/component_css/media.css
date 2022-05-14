@@ -1,1 +1,18 @@
+@page{
+    size: A4 portrait;
+    margin:0.8cm;
+}
 
+
+
+@media print{
+    /*unblock card to make print on next page available */
+    .card {
+        display: block;
+    }
+
+   .card{
+        page-break-after: always;
+    }
+
+}
