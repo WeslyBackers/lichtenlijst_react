@@ -4,18 +4,21 @@ export default class Toolbutton extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {function:this.props.function};
-        console.log(this.state.function)  
+        this.state = {function:String(this.props.function),
+                      visible:true};
+
     }
+
       
   render() {
+
+    console.log(this.props);
+
     return (
         <div>
-            <button className='btn btn-info m-2' 
-            name={this.props.name} 
-            index={this.props.id} 
-            function={String(this.props.function)} 
-            onclick={this.props.function} >
+            <button className='btn btn-secondary m-2' type="button"
+            name={this.props.name} key={this.props.key}
+            index={this.props.id}  data-bs-toggle={this.props.data_bs_toggle} data-bs-target={this.props.data_bs_target}  aria-controls={this.props.aria_controls} aria-expanded={this.props.aria_expanded}>
               {this.props.name}
             </button>
         </div>
