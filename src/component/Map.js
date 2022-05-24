@@ -15,8 +15,8 @@ export default class Map extends Component {
     var position = [51.30, 3.25]
 
     return (
-      <div className='map m-3 p-2 row d-print-none collapse show' id="collapseExample">
-        <MapContainer className='card p-2 border-end border-2 rounded-2 col' center={position} zoom={10} scrollWheelZoom={true}>
+      <div className='map row m-3 p-2 d-print-none collapse show bg-white' id="collapseExample">
+        <MapContainer className='card card-map p-2 border-end border-2 rounded-2 col' center={position} zoom={10} scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="https://www.openseamap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -27,7 +27,7 @@ export default class Map extends Component {
             </Popup>
           </Marker>
         </MapContainer>
-        <Objectinformatie className='objectinformatie' ></Objectinformatie>
+        <Objectinformatie className='objectinformatie col ' ></Objectinformatie>
       </div>
     )
   }

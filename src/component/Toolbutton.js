@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../component_css/Toolbutton.css';
 
 export default class Toolbutton extends Component {
 
@@ -15,8 +16,8 @@ export default class Toolbutton extends Component {
     console.log(this.props);
 
     return (
-        <div>
-            <button className='btn btn-secondary m-2' type="button"
+        <div className='Toolbutton'>
+            <button className='btn btn-secondary m-2 border-start border-top' type="button"
             name={this.props.name} key={this.props.key}
             index={this.props.id}  data-bs-toggle={this.props.data_bs_toggle} data-bs-target={this.props.data_bs_target}  aria-controls={this.props.aria_controls} aria-expanded={this.props.aria_expanded}>
               {this.props.name}

@@ -22,7 +22,7 @@ export default class Toolbar extends Component {
       </Toolbutton>)
     })
     return (
-      <div className='toolbar btn-toolbar m-3 p-2 d-flex btn-group-large rounded-2 d-print-none' role='group'>
+      <div className='toolbar btn-toolbar p-2 d-flex btn-group-large d-print-none' role='group'>
         {buttons}
       </div>
     )

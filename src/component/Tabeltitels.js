@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Tabeltitels extends Component {
   render() {
     return (
-      <div className='tabeltitels table-responsive-xl bd-highlight fixed'>
+      <div className='tabeltitels table-responsive-xl bd-highlight bg-white'>
         <table className='table table-ll'>
         <thead>
             <tr>

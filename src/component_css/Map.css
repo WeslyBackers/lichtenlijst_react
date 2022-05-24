@@ -1,4 +1,9 @@
 .map{
-    height: 50vh;
+    height: 40vh;
     border-radius: 2mm;
+}
+
+.card-map{
+    width:50%;
+    height:100%;
 }

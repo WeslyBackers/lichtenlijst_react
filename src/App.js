@@ -9,8 +9,10 @@ function App() {
   return (
     <div className="App">
       <Titel></Titel>
+      <div className='sticky-top bg-white'>
       <Toolbar></Toolbar>
       <Map></Map>
+      </div>
       <Lichtenlijstboek></Lichtenlijstboek>
     </div>
   );
