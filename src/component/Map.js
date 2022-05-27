@@ -16,7 +16,10 @@ export default class Map extends Component {
 
     return (
       <div className='map row p-4 d-print-none collapse show bg-white' id="collapseExample">
-        <MapContainer className='card card-map p-2 border-end border-2 rounded-2 col' center={position} zoom={10} scrollWheelZoom={true}>
+        <MapContainer className='card card-map p-2 border-end border-2 rounded-2 col' 
+                      center={position} 
+                      zoom={10} 
+                      scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="https://www.openseamap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -27,7 +30,7 @@ export default class Map extends Component {
             </Popup>
           </Marker>
         </MapContainer>
-        <Objectinformatie className='objectinformatie col ' ></Objectinformatie>
+        <Objectinformatie className='objectinformatie col'></Objectinformatie>
       </div>
     )
   }
