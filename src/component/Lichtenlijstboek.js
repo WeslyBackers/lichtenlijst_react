@@ -7,18 +7,37 @@ import axios from 'axios';
 export default class lichtenlijstboek extends Component {
   
   state = {
-    data:[]
+    nrListOfLight:'',
+    data:[],
+    exporttime:'',
+    upToDateUntilBaz:'',
+    year:''
   }
   
-  //get API-data with "axios"
+  //get API-data with "axios", raw api-data = 'res'
   componentDidMount() {
-    axios.get(`https://vhlichtenlijst.free.beeceptor.com/VH/api/data`)
+    axios.get(`http://192.168.68.62:8080/lichtenlijst`)
       .then(res => {
-        const data = res;
+        //console.log(res);
+        const in_data = JSON.parse(res.data);
+        //console.log(in_data)
+        const data = in_data.features
         this.setState({data});
-        console.log(this.state.data.data.features);
+        
+        const exporttime = in_data.exporttime;
+        this.setState({exporttime})
+
+        const upToDateUntilBaz = in_data.upToDateUntilBaz;
+        this.setState({upToDateUntilBaz});
+
+        const nrListOfLight = in_data.nrListOfLight;
+        this.setState({nrListOfLight});
+
+        const year = in_data.year;
+        this.setState({year}); 
+
+        //console.log(this.state);
       })
-      
   }
   
   render() {

@@ -17,7 +17,15 @@ export default class Toolbar extends Component {
     var buttons = [];
     buttonnames.forEach((item,index)=>{
       buttons.push(
-      <Toolbutton name={item.caption} id={item.index} function={item.function} data_bs_toggle={item.data_bs_toggle} data_bs_target={item.data_bs_target} aria_controls={item.aria_controls} aria_expanded={item.aria_expanded}>
+      <Toolbutton 
+        name={item.caption} 
+        id={item.index} 
+        function={item.function} 
+        data_bs_toggle={item.data_bs_toggle} 
+        data_bs_target={item.data_bs_target} 
+        aria_controls={item.aria_controls} 
+        aria_expanded={item.aria_expanded}
+        key={String(item.caption)}>
         {item.caption}
       </Toolbutton>)
     })

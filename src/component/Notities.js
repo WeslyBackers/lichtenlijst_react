@@ -8,7 +8,7 @@ export default class Notities extends Component {
     //amount of lines
     var lines = [];
     for(let i = 0; i < 24; i++){
-      lines.push(<Notitielijn></Notitielijn>);    
+      lines.push(<Notitielijn key={i}></Notitielijn>);    
     }
       return (
         <div className='notities card new-page'>
