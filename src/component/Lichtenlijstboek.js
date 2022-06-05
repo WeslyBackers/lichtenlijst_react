@@ -11,7 +11,8 @@ export default class lichtenlijstboek extends Component {
     data:[],
     exporttime:'',
     upToDateUntilBaz:'',
-    year:''
+    year:'',
+    zonelist:[]
   }
   
   //get API-data with "axios", raw api-data = 'res'
@@ -34,8 +35,10 @@ export default class lichtenlijstboek extends Component {
         this.setState({nrListOfLight});
 
         const year = in_data.year;
-        this.setState({year}); 
-
+        this.setState({year});
+       
+        //var zonelist = [];
+        console.log(data.length);
         //console.log(this.state);
       })
   }
@@ -45,7 +48,7 @@ export default class lichtenlijstboek extends Component {
       <div className='lichtenlijstboek card m-3 p-2'>
         <h2>Lichtenlijst boek</h2>
         <Inleiding className="new-page"></Inleiding>
-        <Lijstderlichten className="new-page"></Lijstderlichten>
+        <Lijstderlichten className="new-page" data={this.state.data}></Lijstderlichten>
         <Notities className="new-page"></Notities>
       </div>
     )

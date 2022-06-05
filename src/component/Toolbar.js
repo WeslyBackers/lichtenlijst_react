@@ -25,7 +25,7 @@ export default class Toolbar extends Component {
         data_bs_target={item.data_bs_target} 
         aria_controls={item.aria_controls} 
         aria_expanded={item.aria_expanded}
-        key={String(item.caption)}>
+        key={item.index}>
         {item.caption}
       </Toolbutton>)
     })
